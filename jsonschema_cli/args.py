@@ -70,6 +70,6 @@ def schema_validate(args):
     instance = load_instance(args.data_file_or_string)
     resolver = relative_path_resolver(schema, base_path=path)
 
-    jsonschema.Draft7Validator(schema, resolver=resolver).validate(instance=instance)
+    Draft7Validator(schema, resolver=resolver).validate(instance=instance)
 
 
