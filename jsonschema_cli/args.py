@@ -1,5 +1,6 @@
 import yaml
 import jsonschema
+from jsonschema.validators import Draft4Validator, Draft6Validator,  Draft7Validator
 import argparse
 import pathlib
 import os
