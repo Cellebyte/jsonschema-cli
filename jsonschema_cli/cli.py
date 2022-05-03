@@ -13,6 +13,6 @@ def run():
 
     try:
         args.func(args)
-    except (jsonschema.exceptions.ValidationError, JsonschemaCliException) as e:
+    except (jsonschema.ValidationError, JsonschemaCliException) as e:
         print(e)
         sys.exit(1)

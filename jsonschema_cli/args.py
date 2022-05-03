@@ -1,6 +1,5 @@
 import yaml
 import jsonschema
-from jsonschema.validators import Draft4Validator, Draft6Validator,  Draft7Validator
 import argparse
 import pathlib
 import os
@@ -70,6 +69,5 @@ def schema_validate(args):
     instance = load_instance(args.data_file_or_string)
     resolver = relative_path_resolver(schema, base_path=path)
 
-    Draft7Validator(schema, resolver=resolver).validate(instance=instance)
-
+    jsonschema.Draft7Validator(schema, resolver=resolver).validate(instance=instance)
 
