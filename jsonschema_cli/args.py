@@ -9,6 +9,7 @@ from jsonschema_cli.exceptions import JsonschemaCliException
 import enum
 import json
 import yaml
+from jsonschema.validators import Draft3Validator, Draft4Validator, Draft6Validator, Draft7Validator, Draft201909Validator, Draft202012Validator
 
 
 def load_schema(schema: str) -> dict:
@@ -69,5 +70,5 @@ def schema_validate(args):
     instance = load_instance(args.data_file_or_string)
     resolver = relative_path_resolver(schema, base_path=path)
 
-    jsonschema.Draft7Validator(schema, resolver=resolver).validate(instance=instance)
+    Draft7Validator(schema, resolver=resolver).validate(instance=instance)
 

@@ -1,5 +1,5 @@
 from jsonschema_cli.handlers import handle_file_uri
-from jsonschema import RefResolver
+from jsonschema.validators import RefResolver
 import os
 
 
