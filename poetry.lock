@@ -1000,21 +1000,22 @@ lxml = "*"
 
 [[package]]
 name = "pyang-json-schema-plugin"
-version = "0.1"
-description = "A pyang plugin to produce a JSON Schema that validates JSON content payload"
+version = "0.1.1"
+description = "a small pyang plugin to convert YANG to jsonschema"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 files = []
 develop = false
 
 [package.dependencies]
-pyang = "*"
+jsonschema = ">=4.0.0"
+pyang = ">=2.6.0"
 
 [package.source]
 type = "git"
 url = "https://github.com/cellebyte/pyang-json-schema-plugin.git"
-reference = "master"
-resolved_reference = "6896a552953f5d4a32402c7953541146601d7851"
+reference = "0.1.1"
+resolved_reference = "f815ae4dcc0f03e53da2e122ee1e43635a4f6e51"
 
 [[package]]
 name = "pycodestyle"
@@ -1650,4 +1651,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.7"
-content-hash = "75bdf84bf04a324674e25d6e503d84617a5f06e076423b9c03543d3e6acd6812"
+content-hash = "be988830b8ab834c74337ca17548d7c768fdfeb516936198c526cb01ef2c4be5"
